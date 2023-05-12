@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: demo-1
+  name: demo-static-website
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-static-website
+  template:
+    metadata:
+      labels:
+        app: demo-static-website
+    spec:
+      containers:
+      - name: static-site-ui
+        image: dockersamples/static-site:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+
