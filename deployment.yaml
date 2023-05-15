@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: demo-1
+  name: demo-static-website
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: demo-static-website
+      env: demo
+  template:
+    metadata:
+      labels:
+        app: demo-static-website
+        env: demo
+    spec:
+      containers:
+      - name: static-site-ui
+        image: nginx:alpine
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+
