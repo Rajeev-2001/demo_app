@@ -23,4 +23,20 @@ By default clusterIP is assign to the service type which is sufficent for us as 
     ingress allows our pods to be access from outside the kubernetes cluster under a domain such as task.rajeevupreti.com.np
 
 
+## Task 2
+    Deploy a java API to docker
+    First Create a Dockerfile to create an image for the java API 
+
+
+## Task 3
+    to send the docker logs to kibana we can use <b>filebeat<b>.
+    filebeat is a log management tool that ships logs to elasticsearch.
+    filebeat ships logs to elasticsearch. For this, we give permission for filebeat to read our docker logs.
+    
+
+
+
+
+
+
 
