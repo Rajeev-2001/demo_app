@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: emqx-deployment
+  namespace: demo-1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: emqx
+  template:
+    metadata:
+      labels:
+        app: emqx
+    spec:
+      containers:
+      - name: emqx
+        image: emqx:5
+        ports:
+        - containerPort: 1883
+        - containerPort: 8883
+        - containerPort: 8083
+        - containerPort: 18083
+
+        resources:
+          requests:
+            cpu: 10m
+            memory: 28Mi
+          limits:
+            cpu: 100m
+            memory: 256Mi

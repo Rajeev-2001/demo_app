@@ -21,3 +21,6 @@ By default clusterIP is assign to the service type which is sufficent for us as 
     Step 3b;
     create ingress resource.
     ingress allows our pods to be access from outside the kubernetes cluster under a domain such as task.rajeevupreti.com.np
+
+
+

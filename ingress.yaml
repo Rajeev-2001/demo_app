@@ -6,7 +6,8 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - http:
+  - host: 'static.rajeevupreti.com.np'
+    http:
       paths:
       - path: /
         pathType: Prefix
@@ -15,3 +16,14 @@ spec:
             name: demo-static-website-service
             port:
               number: 80
+
+  - host: 'emqx.rajeevupreti.com.np'
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: emqx-service
+            port:
+              number: 18083
