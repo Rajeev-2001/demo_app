@@ -43,7 +43,7 @@ By default clusterIP is assign to the service type which is sufficent for us as 
 
 # LINK:
 static.rajeevupreti.com.np
-emqz.rajeevupreti.com.np
+emqx.rajeevupreti.com.np
 
 
 For task 3 i have used docker-compose file instead which i have deployed on codespaces and link will be provided on request.
