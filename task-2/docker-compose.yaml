@@ -46,6 +46,14 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - /var/lib/docker/containers:/var/lib/docker/containers
 
+
+  java_api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+
   # logstash:
   #   image: logstash:8.7.1
   #   volumes:
@@ -56,12 +64,5 @@ services:
 volumes:
   elasticsearch-data:
     driver: local
-
-
-
-
-
-
-
 
 
